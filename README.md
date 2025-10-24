@@ -52,12 +52,9 @@ This is the official repository for the Course-Based Design Project for BCSE312L
     git clone [YOUR_GITHUB_REPO_URL]
     ```
 2.  **Configure Firmware:**
-    * Open the `firmware/occupancy_sensor.ino` file in the Arduino IDE.
-    * Update the credentials in lines 16-30 with your personal keys and passwords:
-        * `ssid` & `password` (Your Wi-Fi)
-        * `myApiKey` (Your ThingSpeak Write API Key)
-        * `AIO_USERNAME` & `AIO_KEY` (Your Adafruit IO keys)
-        * `ntfyTopic` (Your secret ntfy topic name)
+    * In the `firmware/` folder, copy the `env.template.h` file and rename the copy to `env.h`.
+    * Open the new `env.h` file and fill in your personal credentials (Wi-Fi, API Keys, etc.).
+    * The `env.h` file is listed in `.gitignore` and will not be uploaded to GitHub.
 3.  **Upload Firmware:**
     * Connect your ESP8266 board to your computer.
     * Select the correct Board (e.g., "NodeMCU 1.0") and Port in the Arduino IDE.
